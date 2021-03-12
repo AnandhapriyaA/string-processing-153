@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class main extends UserMainCode{
+public static void main(String args[]){
+UserMainCode m= new main();
+Scanner s =new Scanner(System.in);
+System.out.println("enter the string:");
+String string=s.nextLine();
+moveX (string);
+  } }
+class UserMainCode {
+static String moveX (String string){
+    String result=null;int count=0;
+    for(int i=0;i<string.length();i++)
+    if(string.charAt(i)=='x'){
+    result=string.replace("x","");
+    count+=1;}
+StringBuilder sb=new StringBuilder(result);
+for(int i=0;i<count;i++)
+sb.append("x");
+System.out.println(sb.toString());
+return sb.toString();
+}
+}
